@@ -17,7 +17,7 @@ namespace WordCount
             var wordArray = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             foreach (var i in wordArray)
             {
-                output += i + ": " + wordArray.Select(x=>x == i).Count() + " ";
+                output += i + ": " + wordArray.Count(x=>x==i) + " ";
             }
 
             return output;
