@@ -18,7 +18,7 @@ namespace WordCount
         public void OneWordGiven()
         {
             String input = "olly";
-            String expected = "olly: 1";
+            String expected = "olly: 1 ";
 
             Assert.AreEqual(expected, WordCount.CountWord(input));
         }

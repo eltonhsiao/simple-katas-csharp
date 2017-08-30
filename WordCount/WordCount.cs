@@ -13,7 +13,14 @@ namespace WordCount
             if (string.IsNullOrEmpty(input))
                 return "";
 
-            return input;
+            string output = String.Empty;
+            var wordArray = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var i in wordArray)
+            {
+                output += i + ": " + wordArray.Select(x=>x == i).Count() + " ";
+            }
+
+            return output;
         }
     }
 }
