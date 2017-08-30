@@ -14,10 +14,10 @@ namespace WordCount
                 return "";
 
             string output = String.Empty;
-            var wordArray = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            var wordArray = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToList().GroupBy(x => x);
             foreach (var i in wordArray)
             {
-                output += i + ": " + wordArray.Count(x=>x==i) + " ";
+                output += i.Key + ": " + i.Count() + " ";
             }
 
             return output;
