@@ -10,7 +10,10 @@ namespace WordCount
     {
         public static string CountWord(string input)
         {
-            throw new ArgumentException();
+            if (string.IsNullOrEmpty(input))
+                return "";
+
+            return input;
         }
     }
 }
