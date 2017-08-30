@@ -40,5 +40,14 @@ namespace WordCount
 
             Assert.AreEqual(expected, WordCount.CountWord(input));
         }
+
+        [Test]
+        public void OneSentenceGiven()
+        {
+            String input = "olly olly in come free";
+            String expected = "olly: 2 in: 1 come: 1 free: 1 ";
+
+            Assert.AreEqual(expected, WordCount.CountWord(input));
+        }
     }
 }
