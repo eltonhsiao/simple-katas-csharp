@@ -76,5 +76,14 @@ namespace StringAverage
 
             Assert.AreEqual(expected, StringAverage.Average(input));
         }
+
+        [Test]
+        public void OneNumber_Ten_Given_Should_Return_NA()
+        {
+            String input = "Ten";
+            String expected = "n/a";
+
+            Assert.AreEqual(expected, StringAverage.Average(input));
+        }
     }
 }
