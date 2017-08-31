@@ -10,7 +10,9 @@ namespace StringAverage
     {
         public static string Average(string input)
         {
-            throw new System.NotImplementedException();
+            if (string.IsNullOrEmpty(input))
+                return "n/a";
+            return input;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace StringAverage
         public void NoNumberGiven()
         {
             String input = null;
-            String expected = "";
+            String expected = "n/a";
 
             Assert.AreEqual(expected, StringAverage.Average(input));
         }
