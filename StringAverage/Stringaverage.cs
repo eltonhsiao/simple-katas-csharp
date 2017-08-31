@@ -13,7 +13,20 @@ namespace StringAverage
             if (string.IsNullOrEmpty(input))
                 return "n/a";
 
-            return input.Split(' ')[0];
+            var numberDic = new Dictionary<string, int>()
+            {
+                {"one", 1},
+                {"two", 2}
+            };
+
+            var numberList = input.Split(' ');
+            int sum = 0;
+            foreach (var number in numberList)
+            {
+                sum += numberDic[number];
+            }
+
+            return numberDic.FirstOrDefault(x=>x.Value == sum / numberList.Length).Key;
         }
     }
 }
