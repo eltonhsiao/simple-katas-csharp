@@ -22,5 +22,14 @@ namespace StringAverage
 
             Assert.AreEqual(expected, StringAverage.Average(input));
         }
+
+        [Test]
+        public void OneNumber_Four_Given_Should_Return_Zero()
+        {
+            String input = "Four";
+            String expected = "Zero";
+
+            Assert.AreEqual(expected, StringAverage.Average(input));
+        }
     }
 }
