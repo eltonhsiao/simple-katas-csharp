@@ -17,8 +17,8 @@ namespace StringAverage
         [Test]
         public void OneNumber_Zero_Given_Should_Return_Zero()
         {
-            String input = "Zero";
-            String expected = "Zero";
+            String input = "zero";
+            String expected = "zero";
 
             Assert.AreEqual(expected, StringAverage.Average(input));
         }
@@ -26,8 +26,17 @@ namespace StringAverage
         [Test]
         public void OneNumber_Four_Given_Should_Return_Zero()
         {
-            String input = "Four";
-            String expected = "Four";
+            String input = "four";
+            String expected = "four";
+
+            Assert.AreEqual(expected, StringAverage.Average(input));
+        }
+
+        [Test]
+        public void TwoNumber_OneOne_Given_Should_Return_One()
+        {
+            String input = "one one";
+            String expected = "one";
 
             Assert.AreEqual(expected, StringAverage.Average(input));
         }
