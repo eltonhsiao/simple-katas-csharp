@@ -67,5 +67,14 @@ namespace StringAverage
 
             Assert.AreEqual(expected, StringAverage.Average(input));
         }
+
+        [Test]
+        public void SequenceNumber_Given_Should_Return_Four()
+        {
+            String input = "zero nine five two";
+            String expected = "four";
+
+            Assert.AreEqual(expected, StringAverage.Average(input));
+        }
     }
 }
