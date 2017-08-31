@@ -13,7 +13,7 @@ namespace StringAverage
             if (string.IsNullOrEmpty(input))
                 return "n/a";
 
-            return input;
+            return input.Split(' ')[0];
         }
     }
 }
