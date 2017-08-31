@@ -85,5 +85,14 @@ namespace StringAverage
 
             Assert.AreEqual(expected, StringAverage.Average(input));
         }
+
+        [Test]
+        public void SequenceNumberWithTen_Given_Should_Return_NA()
+        {
+            String input = "zero nine five ten";
+            String expected = "n/a";
+
+            Assert.AreEqual(expected, StringAverage.Average(input));
+        }
     }
 }
