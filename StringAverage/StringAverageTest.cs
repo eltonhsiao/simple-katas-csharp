@@ -27,7 +27,7 @@ namespace StringAverage
         public void OneNumber_Four_Given_Should_Return_Zero()
         {
             String input = "Four";
-            String expected = "Zero";
+            String expected = "Four";
 
             Assert.AreEqual(expected, StringAverage.Average(input));
         }
