@@ -29,10 +29,9 @@ namespace StringAverage
                 return "n/a";
 
             var numberList = input.Split(' ');
-            foreach (var number in numberList)
+            if (numberList.Any(number => numberDic.Keys.Any(key => key.Contains(number)) == false))
             {
-                if (numberDic.Keys.Any(key => key.Contains(number)) == false)
-                    return "n/a";
+                return "n/a";
             }
 
             int avg = numberList.Select(x => numberDic[x]).Sum() / numberList.Length;
